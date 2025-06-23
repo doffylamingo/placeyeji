@@ -1,5 +1,12 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
+import {
+  getBaseUrl,
+  getRandomImage,
+  parseDimensions,
+  parseFilters,
+  validateDimensions,
+} from "./utils";
 
 export const config = {
   runtime: "edge",
@@ -7,83 +14,15 @@ export const config = {
 
 const app = new Hono();
 
-interface Dimensions {
-  width?: number;
-  height?: number;
-}
-
-interface Filters {
-  greyscale: boolean;
-  blur: boolean;
-}
-
-interface ImageMeta {
-  data: string;
-  source: string;
-  width: number;
-  height: number;
-}
-
-function parseDimensions(w?: string, h?: string): Dimensions {
-  const width = w ? Number(w) : undefined;
-  const height = h ? Number(h) : width;
-  return { width, height };
-}
-
-function validateDimensions({ width, height }: Dimensions): boolean {
-  const isValidDimension = (dim?: number) =>
-    dim === undefined || (Number.isFinite(dim) && dim >= 1);
-
-  return isValidDimension(width) && isValidDimension(height);
-}
-
-function parseFilters(filterQuery?: string): Filters {
-  const filters = filterQuery?.split(",") || [];
-  return {
-    greyscale: filters.includes("greyscale"),
-    blur: filters.includes("blur"),
-  };
-}
-
-let imageMetaCache: ImageMeta[] | null = null;
-async function getImageMeta() {
-  if (imageMetaCache) return imageMetaCache;
-
-  const res = await fetch(
-    new URL(
-      "/meta.json",
-      new URL("/", process.env.PUBLIC_VERCEL_URL || "http://localhost:3000")
-    ).toString(),
-    {
-      cache: "force-cache",
-    }
-  );
-
-  imageMetaCache = await res.json();
-
-  return imageMetaCache;
-}
-
-async function getRandomImage() {
-  const images = await getImageMeta();
-
-  if (!images || images.length === 0) {
-    return null;
-  }
-
-  const image = images[Math.floor(Math.random() * images.length)];
-
-  return image.data;
-}
-
-app.get("/", async (c) => {
+app.get("/image", async (c) => {
   const { width, height } = parseDimensions(c.req.query("w"), c.req.query("h"));
+  const baseUrl = getBaseUrl(c);
 
   if (!validateDimensions({ width, height })) {
     return c.text("Invalid dimensions", 400);
   }
 
-  const image = await getRandomImage();
+  const image = await getRandomImage(baseUrl);
 
   const { greyscale, blur } = parseFilters(c.req.query("filter"));
 
