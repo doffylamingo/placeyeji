@@ -3,72 +3,144 @@
     "data": "/bWVkaWEvR3QtUG1lMFhZQUE4QlFkLmpwZw==.jpeg",
     "source": "https://x.com/AWann_yx/status/1936424273557786993",
     "width": 1365,
-    "height": 2048
+    "height": 2048,
+    "face": {
+      "x": 434,
+      "y": 381,
+      "w": 304,
+      "h": 222
+    }
   },
   {
     "data": "/bWVkaWEvR3R3QnpONlhzQUEtTTRuLmpwZw==.jpeg",
     "source": "https://x.com/AWann_yx/status/1935423922675310919",
     "width": 2048,
-    "height": 1365
+    "height": 1365,
+    "face": {
+      "x": 850,
+      "y": 279,
+      "w": 303,
+      "h": 303
+    }
   },
   {
     "data": "/bWVkaWEvR3R2YnhZTlhRQUF5QTFFLmpwZw==.jpeg",
     "source": "https://x.com/AWann_yx/status/1935382123734777947",
     "width": 1365,
-    "height": 2048
+    "height": 2048,
+    "face": {
+      "x": 731,
+      "y": 600,
+      "w": 240,
+      "h": 240
+    }
   },
   {
     "data": "/bWVkaWEvR3RhSkpWZ2JNQUVHdzd5LmpwZw==.jpeg",
     "source": "https://x.com/AWann_yx/status/1933883886515474570",
     "width": 1536,
-    "height": 2048
+    "height": 2048,
+    "face": {
+      "x": 580,
+      "y": 448,
+      "w": 332,
+      "h": 321
+    }
   },
   {
     "data": "/bWVkaWEvR21wOG9CNWFZQUFac3M0LmpwZw==.jpeg",
     "source": "https://x.com/AWann_yx/status/1903470823241064675",
     "width": 2048,
-    "height": 1365
+    "height": 1365,
+    "face": {
+      "x": 900,
+      "y": 312,
+      "w": 267,
+      "h": 265
+    }
   },
   {
     "data": "/bWVkaWEvR3FHTnoySmF3QUFhUkR1LmpwZw==.jpeg",
     "source": "https://x.com/chambanama/status/1918970849081577626",
     "width": 1536,
-    "height": 1536
+    "height": 1536,
+    "face": {
+      "x": 641,
+      "y": 450,
+      "w": 303,
+      "h": 283
+    }
   },
   {
     "data": "/bWVkaWEvR3J6YWdZWldZQUFKbjRRLmpwZw==.jpeg",
     "source": "https://x.com/PumpkinITZYD/status/1926655037788299304",
     "width": 2731,
-    "height": 4096
+    "height": 4096,
+    "face": {
+      "x": 1020,
+      "y": 1164,
+      "w": 824,
+      "h": 721
+    }
   },
   {
     "data": "/bWVkaWEvR3R4YmMxV2JvQUF2RzdNLmpwZw==.jpeg",
     "source": "https://x.com/Panda526_YE/status/1935522518833705014",
     "width": 2732,
-    "height": 4096
+    "height": 4096,
+    "face": {
+      "x": 1110,
+      "y": 900,
+      "w": 448,
+      "h": 377
+    }
   },
   {
     "data": "/bWVkaWEvR3VEYmJQa1hFQUFVbWFOLmpwZw==.jpeg",
     "source": "https://x.com/YEnni_404/status/1936789114483102110",
     "width": 2728,
-    "height": 4096
+    "height": 4096,
+    "face": {
+      "x": 1059,
+      "y": 785,
+      "w": 856,
+      "h": 713
+    }
   },
   {
     "data": "/bWVkaWEvR3VEVmNseFdrQUFhVFFaLmpwZw==.jpeg",
     "source": "https://x.com/YEnni_404/status/1936782539722772582",
     "width": 2667,
-    "height": 3978
+    "height": 3978,
+    "face": {
+      "x": 1100,
+      "y": 661,
+      "w": 584,
+      "h": 521
+    }
   },
   {
     "data": "/bWVkaWEvR3J6YXVtWVhZQUlEN3o3LmpwZw==.jpeg",
     "source": "https://x.com/PumpkinITZYD/status/1926655266860175450",
     "width": 2419,
-    "height": 3628
+    "height": 3628,
+    "face": {
+      "x": 800,
+      "y": 771,
+      "w": 584,
+      "h": 537
+    }
   },
   {
     "data": "/bWVkaWEvR2VOWEtEWGFFQUFxajRaLmpwZw==.jpeg",
     "source": "https://x.com/AWann_yx/status/1865430537172848821",
     "width": 1365,
-    "height": 2048
+    "height": 2048,
+    "face": {
+      "x": 647,
+      "y": 609,
+      "w": 322,
+      "h": 322
+    }
   }
 ]

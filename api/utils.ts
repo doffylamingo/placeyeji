@@ -16,7 +16,9 @@ export async function getImageMeta(
   return imageMetaCache;
 }
 
-export async function getRandomImage(baseUrl: string): Promise<string | null> {
+export async function getRandomImage(
+  baseUrl: string
+): Promise<ImageMeta | null> {
   const images = await getImageMeta(baseUrl);
 
   if (!images || images.length === 0) {
@@ -25,10 +27,10 @@ export async function getRandomImage(baseUrl: string): Promise<string | null> {
 
   const image = images[Math.floor(Math.random() * images.length)];
 
-  return await convertImageToBase64(image.data, baseUrl);
+  return image;
 }
 
-async function convertImageToBase64(imgSrc: string, baseUrl: string) {
+export async function convertImageToBase64(imgSrc: string, baseUrl: string) {
   const abs = new URL(imgSrc, baseUrl).toString();
   const response = await fetch(abs, { cache: "force-cache" });
   const arrayBuffer = await response.arrayBuffer();

@@ -13,4 +13,12 @@ export interface ImageMeta {
   source: string;
   width: number;
   height: number;
+  face: FaceCoords;
+}
+
+interface FaceCoords {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
 }
